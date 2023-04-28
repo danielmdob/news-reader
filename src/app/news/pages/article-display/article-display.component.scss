@@ -3,12 +3,14 @@
 }
 
 h2 {
-  background: darkgray;
+  background: rgba(122, 122, 122, 0.5);
   color: white;
-  margin: 0;
+  margin: 0 0 0 24px;
   display: block;
   width: 100%;
   padding: 12px;
+  position: absolute;
+  bottom: 0;
 }
 
 section {
@@ -18,4 +20,11 @@ section {
 
 .content {
   max-width: 1000px;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
 }

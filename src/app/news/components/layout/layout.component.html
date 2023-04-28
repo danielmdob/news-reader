@@ -7,7 +7,10 @@
 </header>
 <div class="side-layout">
   <aside [ngClass]="{'shown-on-mobile': showNewsOnMobile}">
-    <a *ngFor="let newsArticle of news | async" class="article" [routerLink]="['/news', newsArticle.identifier]" [routerLinkActive]="['active']">{{newsArticle.title}}</a>
+    <a *ngFor="let newsArticle of news$ | async" class="article" [routerLink]="['/news', newsArticle.identifier]" [routerLinkActive]="['active']">
+      <img [src]="apiUrl + newsArticle.image + '/50w'" *ngIf="newsArticle.image" /> {{newsArticle.title}}
+    </a>
   </aside>
   <ng-content></ng-content>
 </div>
+

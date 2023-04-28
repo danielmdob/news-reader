@@ -1,5 +1,8 @@
 <ng-container *ngIf="(article$ | async) as article">
-  <h2>{{article.title}}</h2>
+  <div class="title">
+    <img *ngIf="article.image" [src]="apiUrl + article.image + '/500h'" />
+    <h2>{{article.title}}</h2>
+  </div>
   <section>
     <div class="content">
       <h3>{{article.teaser}}</h3>

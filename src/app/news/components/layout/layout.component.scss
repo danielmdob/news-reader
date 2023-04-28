@@ -28,7 +28,13 @@ aside {
 
 .article {
   padding: 6px;
-  display: block;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+  img {
+    margin-right: 4px;
+  }
 }
 
 a {

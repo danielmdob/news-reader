@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { News } from '../../types';
+import { API_URL } from '../../constants';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class NewsService {
 
   constructor(private httpClient: HttpClient) { }
@@ -19,7 +18,7 @@ export class NewsService {
         contentlets: News[]
       }
     }
-  }>('https://demo.dotcms.com/api/content/_search', {
+  }>(`${API_URL}api/content/_search`, {
       query: finalQuery
     })
       .pipe(
