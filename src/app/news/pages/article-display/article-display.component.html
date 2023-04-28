@@ -6,6 +6,9 @@
   <section>
     <div class="content">
       <h3>{{article.teaser}}</h3>
+      <div>
+        <p *ngFor="let paragraph of article.paragraphs">{{paragraph}}</p>
+      </div>
     </div>
   </section>
 </ng-container>

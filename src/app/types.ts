@@ -3,4 +3,5 @@ export interface News {
   teaser: string;
   identifier: string;
   image: string;
+  paragraphs?: string[];
 }
