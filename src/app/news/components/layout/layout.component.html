@@ -1,0 +1,13 @@
+<header>
+  DotCMS News Listing
+  <button (click)="toggleMobileShow()" class="expand-button">Toggle News</button>
+  <select [formControl]="yearControl">
+    <option *ngFor="let option of selectOptions">{{option}}</option>
+  </select>
+</header>
+<div class="side-layout">
+  <aside [ngClass]="{'shown-on-mobile': showNewsOnMobile}">
+    <a *ngFor="let newsArticle of news | async" class="article" [routerLink]="['/news', newsArticle.identifier]" [routerLinkActive]="['active']">{{newsArticle.title}}</a>
+  </aside>
+  <ng-content></ng-content>
+</div>

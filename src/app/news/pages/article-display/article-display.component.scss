@@ -1,0 +1,21 @@
+:host {
+  width: 100%;
+}
+
+h2 {
+  background: darkgray;
+  color: white;
+  margin: 0;
+  display: block;
+  width: 100%;
+  padding: 12px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1000px;
+}

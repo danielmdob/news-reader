@@ -1,0 +1,8 @@
+<ng-container *ngIf="(article$ | async) as article">
+  <h2>{{article.title}}</h2>
+  <section>
+    <div class="content">
+      <h3>{{article.teaser}}</h3>
+    </div>
+  </section>
+</ng-container>

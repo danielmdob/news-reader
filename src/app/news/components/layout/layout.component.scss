@@ -1,0 +1,56 @@
+:host {
+  height: 100%;
+}
+
+header {
+  border: 1px solid black;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside {
+  width: 100%;
+  border: solid black 1px;
+  border-top: 0;
+  display: none;
+  &.shown-on-mobile {
+    display: block;
+  }
+}
+
+
+.side-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.article {
+  padding: 6px;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  background: black;
+  color: white;
+}
+
+@media (min-width: 640px) {
+  .side-layout {
+    flex-direction: row;
+    height: 100%;
+  }
+  aside {
+    display: block;
+    width: 200px;
+  }
+  .expand-button {
+    display: none;
+  }
+}
